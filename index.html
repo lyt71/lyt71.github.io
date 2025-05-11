@@ -74,8 +74,13 @@
     .profile-section {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 20px;
       animation: fadeIn 1s ease;
+    }
+    .profile-info {
+      display: flex;
+      align-items: center;
     }
     .profile-image {
       border-radius: 8px;
@@ -110,19 +115,51 @@
     .publication-item:hover {
       transform: translateX(10px);
     }
+    /* 添加简历下载按钮样式 */
+    .resume-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .resume-button:hover {
+      background-color: #005999;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* 添加论文链接样式 */
+    .paper-link {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .paper-link:hover {
+      color: #005999;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="profile-section">
-    <img src="photo.jpg" alt="Profile photo" width="120" class="profile-image">
-    <div>
-      <h1 style="margin: 0;">Yiting Liu</h1>
-      <p style="margin: 5px 0 0 0;">
-        Ph.D. Candidate, Control Science and Engineering<br>
-        Xidian University, Xi'an, China<br>
-        Email: lyting71@gmail.com | Phone: +86 18909447896
-      </p>
+    <div class="profile-info">
+      <img src="photo.jpg" alt="Profile photo" width="120" class="profile-image">
+      <div>
+        <h1 style="margin: 0;">Yiting Liu</h1>
+        <p style="margin: 5px 0 0 0;">
+          Ph.D. Candidate, Control Science and Engineering<br>
+          Xidian University, Xi'an, China<br>
+          Email: lyting71@gmail.com | Phone: +86 18909447896
+        </p>
+      </div>
     </div>
+    <a href="resume.pdf" class="resume-button" download>Download CV</a>
   </div>
 
   <nav>
@@ -160,8 +197,16 @@
   <div class="section" id="publications">
     <h2>Selected Publications</h2>
     <ul>
-      <li class="publication-item">Y. Liu, J. Li, M. Gong, et al., "Collaborative Self-Supervised Evolution for Few-Shot Remote Sensing Scene Classification", <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 2024.</li>
-      <li class="publication-item">Y. Liu, H. Li, M. Gong, A. K. Qin, "Nonzero Degree-Based Multiobjective Cooperative Coevolutionary for Block Sparse Recovery", <em>IEEE Transactions on Evolutionary Computation</em>, 2024.</li>
+      <li class="publication-item">Y. Liu, J. Li, M. Gong, et al., 
+        <a href="https://ieeexplore.ieee.org/document/..." class="paper-link" target="_blank">
+          "Collaborative Self-Supervised Evolution for Few-Shot Remote Sensing Scene Classification"
+        </a>, 
+        <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 2024.</li>
+      <li class="publication-item">Y. Liu, H. Li, M. Gong, A. K. Qin, 
+        <a href="https://ieeexplore.ieee.org/document/..." class="paper-link" target="_blank">
+          "Nonzero Degree-Based Multiobjective Cooperative Coevolutionary for Block Sparse Recovery"
+        </a>, 
+        <em>IEEE Transactions on Evolutionary Computation</em>, 2024.</li>
       <li class="publication-item">Y. Liu, H. Li, M. Gong, et al., "Evolutionary Multitasking CNN Architecture Search for Hyperspectral Image Classification", <em>IJCNN</em>, 2022.</li>
       <li class="publication-item">Z. Wang, J. Li, Y. Liu, et al., "Adaptive Surrogate-Assisted Endmember Extraction Framework", <em>Remote Sensing</em>, 2022.</li>
       <li class="publication-item">J. Li, H. Li, Y. Liu, et al., "Multi-fidelity Evolutionary Multitasking Optimization", <em>Applied Soft Computing</em>, 2021.</li>
