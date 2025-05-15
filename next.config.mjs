@@ -11,7 +11,13 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-  }
+  },
+  basePath: '',
+  assetPrefix: '',
+  trailingSlash: true,
+  distDir: 'out',
+  poweredByHeader: false,
+  reactStrictMode: true,
 };
 
 export default nextConfig;
