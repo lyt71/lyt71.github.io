@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications - Yiting Liu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #007acc;
+      transition: width 0.3s ease;
+    }
+    h2:hover::after {
+      width: 100%;
+    }
+    nav {
+      margin-bottom: 20px;
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 10px 20px;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav a {
+      margin: 0;
+      text-decoration: none;
+      color: #007acc;
+      position: relative;
+      transition: color 0.3s ease;
+      padding: 0 10px;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #007acc;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #005999;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .publication-item {
+      transition: transform 0.3s ease;
+    }
+    .publication-item:hover {
+      transform: translateX(10px);
+    }
+    .paper-link {
+      color: #4da6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .paper-link:hover {
+      color: #3399ff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="education.html">Education</a>
+    <a href="publications.html">Publications</a>
+    <a href="awards.html">Honors</a>
+  </nav>
+
+  <div class="section" id="publications">
+    <h2>Selected Publications</h2>
+    <ul>
+      <li class="publication-item">Y. Liu, J. Li, M. Gong, et al., 
+        <a href="https://ieeexplore.ieee.org/abstract/document/10613908" class="paper-link" target="_blank">
+          "Collaborative Self-Supervised Evolution for Few-Shot Remote Sensing Scene Classification"
+        </a>, 
+        <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 2024.</li>
+      <li class="publication-item">Y. Liu, H. Li, M. Gong, A. K. Qin, 
+        <a href="https://ieeexplore.ieee.org/abstract/document/10092910" class="paper-link" target="_blank">
+          "Nonzero Degree-Based Multiobjective Cooperative Coevolutionary for Block Sparse Recovery"
+        </a>, 
+        <em>IEEE Transactions on Evolutionary Computation</em>, 2024.</li>
+      <li class="publication-item">Y. Liu, H. Li, M. Gong, et al., 
+        <a href="https://ieeexplore.ieee.org/document/9892237" class="paper-link" target="_blank">
+          "Evolutionary Multitasking CNN Architecture Search for Hyperspectral Image Classification"
+        </a>, 
+        <em>2022 International Joint Conference on Neural Networks (IJCNN)</em>, 2022.</li>
+      <li class="publication-item">Z. Wang, J. Li, Y. Liu, et al., 
+        <a href="https://doi.org/10.3390/rs14040892" class="paper-link" target="_blank">
+          "An Adaptive Surrogate-Assisted Endmember Extraction Framework Based on Intelligent Optimization Algorithms for Hyperspectral Remote Sensing Images"
+        </a>, 
+        <em>Remote Sensing</em>, 2022.</li>
+      <li class="publication-item">J. Li, H. Li, Y. Liu, et al., 
+        <a href="https://www.sciencedirect.com/science/article/pii/S1568494621006347" class="paper-link" target="_blank">
+          "Multi-fidelity evolutionary multitasking optimization for hyperspectral endmember extraction"
+        </a>, 
+        <em>Applied Soft Computing</em>, 2021.</li>
+      <li class="publication-item">Y. Liu, et al., "Multiobjective Coevolutionary Bayesian Learning for Hyperspectral Sparse Unmixing", <em>Submitted</em>.</li>
+      <li class="publication-item">Y. Liu, et al., "A Multi-level Collaborative Multi-task Sparse Learning Framework and Case Study", <em>In Progress</em>.</li>
+    </ul>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html> 
