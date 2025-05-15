@@ -13,7 +13,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/lyt71.github.io',
-  assetPrefix: '/lyt71.github.io/',
+  assetPrefix: 'https://lyt71.github.io/lyt71.github.io/',
   trailingSlash: true,
 };
 
