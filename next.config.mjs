@@ -12,6 +12,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/lyt71.github.io',
 };
 
 export default nextConfig;
