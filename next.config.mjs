@@ -12,7 +12,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/lyt71.github.io',
   assetPrefix: '/lyt71.github.io/',
+  trailingSlash: true,
 };
 
 export default nextConfig;
